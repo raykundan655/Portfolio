@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kundan Kr Ray | CS Engineer · DSA · ML</title>
+  <meta name="description"
+    content="Kundan Kr Ray — CS Engineer specializing in DSA, Systems, and Machine Learning. Live engineering portfolio.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ── Preloader ── -->
+  <div id="preloader">
+    <div class="pl-box">
+      <div class="pl-logo">[KKR]</div>
+      <div class="pl-bar-wrap">
+        <div class="pl-bar" id="pl-bar"></div>
+      </div>
+      <div class="pl-status" id="pl-status">$ initializing system...</div>
+    </div>
+  </div>
+
+  <!-- ── Cursor ── -->
+  <div id="cursor"></div>
+
+  <!-- ── BG Layers ── -->
+  <canvas id="neural-bg"></canvas>
+  <div class="grid-overlay"></div>
+
+  <!-- ── Floating Orbs ── -->
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <!-- ── Nav ── -->
+  <nav id="navbar">
+    <div class="logo">[<span class="t-green">KKR</span>]<span class="logo-cursor">█</span></div>
+    <ul class="nav-links">
+      <li><a href="#home"><span class="nn">01.</span>Home</a></li>
+      <li><a href="#about"><span class="nn">02.</span>About</a></li>
+      <li><a href="#projects"><span class="nn">03.</span>Projects</a></li>
+      <li><a href="#skills"><span class="nn">04.</span>Skills</a></li>
+      <li><a href="#experience"><span class="nn">05.</span>Experience</a></li>
+      <li><a href="#education"><span class="nn">06.</span>Education</a></li>
+      <li><a href="#dsa"><span class="nn">07.</span>DSA &amp; ML</a></li>
+      <li><a href="#contact"><span class="nn">08.</span>Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">./hire_me</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ════════════════════════════════════════════ HERO -->
+  <section id="home">
+    <div class="hero-layout">
+
+      <!-- Left: Terminal Auto-runner -->
+      <div class="hero-terminal reveal">
+        <div class="term-bar">
+          <div class="tdots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+          <span class="tbarlabel">kundan@engineer:~</span>
+          <span class="tbar-live"><span class="live-dot"></span>LIVE</span>
+        </div>
+        <div class="term-body" id="hero-term-body"></div>
+        <div class="term-input-row">
+          <span class="t-green">$</span><span class="t-cursor-sq" id="hero-cursor">█</span>
+        </div>
+      </div>
+
+      <!-- Right: Identity + Stats -->
+      <div class="hero-right reveal">
+        <div class="hero-badge"><span class="badge-dot"></span>Available for Opportunities</div>
+        <h1 class="hero-name">
+          <span class="hn-line1">Kundan Kr Ray</span>
+          <span class="hn-line2" id="hero-typer"></span>
+        </h1>
+        <p class="hero-sub">Engineering systems, solving problems, training models.</p>
+        <div class="id-tags">
+          <span class="itag"><i class="fas fa-code"></i>Software Engineer</span>
+          <span class="itag"><i class="fas fa-puzzle-piece"></i>Problem Solver</span>
+          <span class="itag"><i class="fas fa-brain"></i>ML Engineer</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-p"><i class="fas fa-terminal"></i>./view_work</a>
+          <a href="#dsa" class="btn btn-o"><i class="fas fa-chart-bar"></i>DSA Stats</a>
+          <a href="https://drive.google.com/file/d/1mihVbbC1PvbTY2G7FnSDEkGmxyE7jOsS/view?usp=sharing" target="_blank"
+            class="btn btn-g"><i class="fas fa-file-code"></i>Resume.pdf</a>
+        </div>
+
+        <!-- Live counter stats -->
+        <div class="hero-stats">
+          <div class="hs"><span class="hn" id="ctr-problems">0</span><span class="hl2">Problems Solved</span></div>
+          <div class="hs-sep"></div>
+          <div class="hs"><span class="hn" id="ctr-projects">0</span><span class="hl2">Projects Built</span></div>
+          <div class="hs-sep"></div>
+          <div class="hs"><span class="hn" id="ctr-gpa">0.0</span><span class="hl2">CGPA / 10</span></div>
+        </div>
+
+        <!-- System log ticker -->
+        <div class="syslog-ticker">
+          <span class="t-green">SYS</span>&nbsp;
+          <span id="syslog-text" class="syslog-msg">initializing portfolio engine...</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="scroll-hint"><span class="sh-text">scroll</span>
+      <div class="sh-line"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ ABOUT -->
+  <section id="about">
+    <div class="s-head reveal">
+      <span class="slabel">// 02. about_me.json</span>
+      <h2 class="stitle">The Engineer Behind the Code</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal-left">
+        <p>I'm a <span class="hl">Computer Science student</span> who thinks in algorithms and builds in systems. Before
+          touching a framework, I make sure the <span class="hl">logic is optimal</span>.</p>
+        <p>I've grinded <span class="hl">350+ DSA problems</span> on LeetCode &amp; GeeksForGeeks — not just for
+          interviews, but because algorithmic thinking makes every solution better.</p>
+        <p>ML is a powerful tool in my engineering toolbox. My foundation is <span class="hl">C++, data structures,
+            systems thinking</span>, and writing code that actually scales.</p>
+        <div class="about-btns">
+          <a href="#projects" class="btn btn-p" style="padding:.6rem 1.4rem;font-size:.82rem;"><i
+              class="fas fa-code-branch"></i>Projects</a>
+          <a href="https://drive.google.com/file/d/1mihVbbC1PvbTY2G7FnSDEkGmxyE7jOsS/view?usp=sharing" target="_blank"
+            class="btn btn-o" style="padding:.6rem 1.4rem;font-size:.82rem;"><i class="fas fa-download"></i>CV.pdf</a>
+        </div>
+      </div>
+      <div class="about-json reveal-right">
+        <div class="term-bar">
+          <div class="tdots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+          <span class="tbarlabel">profile.json</span>
+        </div>
+        <pre class="json-block"><code><span class="cd-b">{</span>
+  <span class="cd-k">"name"</span>: <span class="cd-s">"Kundan Kr Ray"</span>,
+  <span class="cd-k">"role"</span>: <span class="cd-s">"Software Engineer"</span>,
+  <span class="cd-k">"secondary"</span>: <span class="cd-s">"ML Engineer"</span>,
+  <span class="cd-k">"languages"</span>: [<span class="cd-s">"C++"</span>, <span class="cd-s">"Python"</span>, <span class="cd-s">"SQL"</span>],
+  <span class="cd-k">"strengths"</span>: [
+    <span class="cd-s">"DSA"</span>, <span class="cd-s">"System Design"</span>,
+    <span class="cd-s">"ML Pipelines"</span>, <span class="cd-s">"Optimization"</span>
+  ],
+  <span class="cd-k">"gpa"</span>: <span class="cd-n">8.5</span>,
+  <span class="cd-k">"problems_solved"</span>: <span class="cd-n">300</span>,
+  <span class="cd-k">"open_to_work"</span>: <span class="cd-bool">true</span>
+<span class="cd-b">}</span></code></pre>
+        <div class="about-meta">
+          <div class="am">
+            <div class="amn">350+</div>
+            <div class="amk">Problems</div>
+          </div>
+          <div class="am">
+            <div class="amn" style="color:var(--c2)">15+</div>
+            <div class="amk">Projects</div>
+          </div>
+          <div class="am">
+            <div class="amn" style="color:var(--c3)">8.5</div>
+            <div class="amk">CGPA</div>
+          </div>
+          <div class="am">
+            <div class="amn" style="color:var(--c4)">∞</div>
+            <div class="amk">Curiosity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ DSA -->
+  <section id="dsa">
+    <div class="s-head reveal">
+      <span class="slabel">// 03. problem_solving.cpp</span>
+      <h2 class="stitle">Data Structures &amp; Algorithms</h2>
+    </div>
+
+    <div class="dsa-platforms reveal" style="margin-bottom:3rem">
+      <div class="platform-card pc-leet tilt-card">
+        <div class="pc-top">
+          <div class="pc-icon lc-icon"><i class="fas fa-code"></i></div>
+          <div>
+            <div class="pc-name">LeetCode</div>
+            <div class="pc-handle">
+              <a style="color:white; text-decoration:none" href="https://leetcode.com/u/kundan_ray/"
+                title="_blank">kundan_ray</a>
+            </div>
+          </div>
+        </div>
+        <div class="cf-stats" style="margin-top:1.5rem">
+          <div class="cfs"><span class="cfs-n t-green" style="font-size:2.5rem" id="lc-total">250</span><span
+              class="cfs-l">Problems Solved</span></div>
+        </div>
+      </div>
+      <div class="platform-card tilt-card" style="border-color:rgba(0, 255, 102, .2)">
+        <div class="pc-top">
+          <div class="pc-icon" style="background:rgba(0, 255, 102, .1);color:var(--c1)"><i class="fas fa-file-code"></i>
+          </div>
+          <div>
+            <div class="pc-name">GeeksforGeeks</div>
+            <div class="pc-handle">
+              <a style="color:white; text-decoration:none" href="https://www.geeksforgeeks.org/profile/mahirauv6c"
+                title="_blank">
+                mahirauv6c
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cf-stats" style="margin-top:1.5rem">
+          <div class="cfs"><span class="cfs-n t-cyan" style="font-size:2.5rem" id="gfg-total">100</span><span
+              class="cfs-l">Problems Solved</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic mastery with pulsing bars -->
+    <div class="topics-wrap reveal" style="margin-top:3rem">
+      <div class="sub-title"><i class="fas fa-sitemap"></i> Topic Mastery — <span class="t-green pulse-text">Live
+          Stats</span></div>
+      <div class="topics-grid">
+        <div class="topic-card tc-animated">
+          <div class="tc-head"><i class="fas fa-project-diagram t-green"></i> Graphs</div>
+          <div class="tc-bar">
+            <div class="tc-fill" style="--tw:85%;--clr:var(--c1)"></div>
+          </div>
+          <div class="tc-sub">BFS · DFS · Dijkstra · Union-Find</div>
+          <div class="tc-count"><span class="tcc" data-top="graphs">0</span> problems</div>
+        </div>
+        <div class="topic-card tc-animated">
+          <div class="tc-head"><i class="fas fa-tree t-cyan"></i> Trees &amp; BST</div>
+          <div class="tc-bar">
+            <div class="tc-fill" style="--tw:90%;--clr:var(--c2)"></div>
+          </div>
+          <div class="tc-sub">Segment Tree · LCA · AVL</div>
+          <div class="tc-count"><span class="tcc" data-top="trees">0</span> problems</div>
+        </div>
+        <div class="topic-card tc-animated">
+          <div class="tc-head"><i class="fas fa-table t-yellow"></i> Dynamic Programming</div>
+          <div class="tc-bar">
+            <div class="tc-fill" style="--tw:80%;--clr:var(--c4)"></div>
+          </div>
+          <div class="tc-sub">Knapsack · LCS · Bitmask DP</div>
+          <div class="tc-count"><span class="tcc" data-top="dp">0</span> problems</div>
+        </div>
+        <div class="topic-card tc-animated">
+          <div class="tc-head"><i class="fas fa-sort-amount-up t-pink"></i> Sorting &amp; Search</div>
+          <div class="tc-bar">
+            <div class="tc-fill" style="--tw:95%;--clr:var(--c3)"></div>
+          </div>
+          <div class="tc-sub">Merge · Quick · Binary Search</div>
+          <div class="tc-count"><span class="tcc" data-top="sort">0</span> problems</div>
+        </div>
+        <div class="topic-card tc-animated">
+          <div class="tc-head"><i class="fas fa-link t-green"></i> Linked Lists</div>
+          <div class="tc-bar">
+            <div class="tc-fill" style="--tw:92%;--clr:var(--c1)"></div>
+          </div>
+          <div class="tc-sub">Reversal · Cycle · LRU Cache</div>
+          <div class="tc-count"><span class="tcc" data-top="ll">0</span> problems</div>
+        </div>
+        <div class="topic-card tc-animated">
+          <div class="tc-head"><i class="fas fa-cubes t-cyan"></i> Heaps &amp; Hashing</div>
+          <div class="tc-bar">
+            <div class="tc-fill" style="--tw:88%;--clr:var(--c2)"></div>
+          </div>
+          <div class="tc-sub">Priority Queue · Hash Maps</div>
+          <div class="tc-count"><span class="tcc" data-top="heap">0</span> problems</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DSA banner -->
+    <div class="dsa-banner reveal">
+      <div class="dsab-item"><span class="dsabn t-green">300+</span><span class="dsabl">Problems Solved</span></div>
+      <div class="dsab-item"><span class="dsabn t-cyan">Top 15%</span><span class="dsabl">LeetCode Global</span></div>
+      <div class="dsab-item"><span class="dsabn t-yellow">Strong in</span><span class="dsabl">Graphs &amp;
+          Optimization</span></div>
+      <div class="dsab-item"><span class="dsabn t-pink">Daily</span><span class="dsabl">Active Practitioner</span></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ ML LAB -->
+  <section id="ml">
+    <div class="s-head reveal">
+      <span class="slabel">// 04. ml_lab.js — LIVE</span>
+      <h2 class="stitle">Machine Learning Lab</h2>
+    </div>
+    <p class="sdesc reveal">Real ML engineering — from data pipelines to trained models. Not just using libraries;
+      building the systems around them.</p>
+
+    <!-- Charts Row -->
+    <div class="ml-charts-row reveal">
+
+      <!-- Accuracy Line Chart -->
+      <div class="ml-chart-card">
+        <div class="mcc-header">
+          <span class="mcc-title"><i class="fas fa-chart-line t-green"></i> Model Accuracy — Live Training</span>
+          <span class="mcc-live"><span class="live-dot"></span>Running</span>
+        </div>
+        <canvas id="acc-chart" height="180"></canvas>
+        <div class="chart-stats">
+          <span class="cs-item">Train: <span class="t-green" id="train-acc">0.00</span></span>
+          <span class="cs-item">Val: <span class="t-cyan" id="val-acc">0.00</span></span>
+          <span class="cs-item">Epoch: <span class="t-yellow" id="epoch-n">0</span>/100</span>
+        </div>
+      </div>
+
+      <!-- Loss Bar Chart -->
+      <div class="ml-chart-card">
+        <div class="mcc-header">
+          <span class="mcc-title"><i class="fas fa-chart-bar t-cyan"></i> Loss Curve — Converging</span>
+          <span class="mcc-live"><span class="live-dot"></span>Running</span>
+        </div>
+        <canvas id="loss-chart" height="180"></canvas>
+        <div class="chart-stats">
+          <span class="cs-item">Loss: <span class="t-pink" id="cur-loss">1.000</span></span>
+          <span class="cs-item">LR: <span class="t-yellow">0.001</span></span>
+          <span class="cs-item">Batch: <span class="t-green">32</span></span>
+        </div>
+      </div>
+
+      <!-- Neural Net Visualization -->
+      <div class="ml-chart-card">
+        <div class="mcc-header">
+          <span class="mcc-title"><i class="fas fa-brain t-pink"></i> Neural Network — Active</span>
+          <span class="mcc-live"><span class="live-dot"></span>Forward pass</span>
+        </div>
+        <canvas id="nn-canvas" height="200"></canvas>
+      </div>
+
+    </div>
+
+    <!-- Data Pipeline -->
+    <div class="data-pipeline reveal" style="margin-top:3rem">
+      <div class="sub-title"><i class="fas fa-stream t-green"></i> Data Pipeline — Processing</div>
+      <div class="pipeline-flow">
+        <div class="pf-stage active-stage">
+          <div class="pfs-icon"><i class="fas fa-database"></i></div>
+          <div class="pfs-name">Raw Data</div>
+          <div class="pfs-stat"><span class="pf-count" data-target="12500">0</span> rows</div>
+          <div class="pf-progress">
+            <div class="pfp-fill" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="pf-arrow">→</div>
+        <div class="pf-stage">
+          <div class="pfs-icon" style="color:var(--c2)"><i class="fas fa-filter"></i></div>
+          <div class="pfs-name">Cleaning</div>
+          <div class="pfs-stat"><span class="pf-count" data-target="11800">0</span> valid</div>
+          <div class="pf-progress">
+            <div class="pfp-fill" style="width:94%;background:var(--c2)"></div>
+          </div>
+        </div>
+        <div class="pf-arrow">→</div>
+        <div class="pf-stage">
+          <div class="pfs-icon" style="color:var(--c4)"><i class="fas fa-wrench"></i></div>
+          <div class="pfs-name">Features</div>
+          <div class="pfs-stat"><span class="pf-count" data-target="48">0</span> features</div>
+          <div class="pf-progress">
+            <div class="pfp-fill" style="width:78%;background:var(--c4)"></div>
+          </div>
+        </div>
+        <div class="pf-arrow">→</div>
+        <div class="pf-stage">
+          <div class="pfs-icon" style="color:var(--c3)"><i class="fas fa-brain"></i></div>
+          <div class="pfs-name">Training</div>
+          <div class="pfs-stat">Epoch <span id="pipe-epoch">1</span>/100</div>
+          <div class="pf-progress">
+            <div class="pfp-fill pfp-animated" style="background:var(--c3)"></div>
+          </div>
+        </div>
+        <div class="pf-arrow">→</div>
+        <div class="pf-stage">
+          <div class="pfs-icon" style="color:var(--c1)"><i class="fas fa-check-circle"></i></div>
+          <div class="pfs-name">Model</div>
+          <div class="pfs-stat"><span class="t-green">Deployed</span></div>
+          <div class="pf-progress">
+            <div class="pfp-fill" style="width:100%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ PROJECTS -->
+  <section id="projects">
+    <div class="s-head reveal">
+      <span class="slabel">// 05. featured_work</span>
+      <h2 class="stitle">Projects</h2>
+    </div>
+
+    <!-- Engineering Projects -->
+    <div class="proj-group-label reveal"><span class="t-green">▶</span> Engineering &amp; Systems</div>
+    <div class="projects-grid">
+
+      <div class="proj-card tilt-card reveal">
+        <div class="proj-content-front">
+          <div class="proj-hdr">
+            <div class="ptags"><span class="ptag">C++</span><span class="ptag">Graphs</span><span
+                class="ptag">BFS/DFS</span></div>
+            <div class="plinks"><a href="https://github.com/raykundan655" class="plink"><i
+                  class="fab fa-github"></i></a><a href="#" class="plink"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="pname"><i class="fas fa-sitemap t-green"></i> Graph Pathfinder Engine</h3>
+          <p class="pdesc blur-text">C++ engine with Dijkstra, A*, and Bellman-Ford. Custom priority queue with lazy
+            deletion. Handles 10⁶ nodes &lt;200ms.</p>
+          <div class="pmetrics front-metrics"><span class="pmitem"><i class="fas fa-clock"></i> O(E log V)</span><span
+              class="pmitem"><i class="fas fa-bolt"></i> 10⁶ nodes/200ms</span></div>
+        </div>
+        <div class="proj-overlay">
+          <div class="po-scroll">
+            <h3 class="pname t-green">Graph Pathfinder Engine</h3>
+            <div class="p-problem"><span class="ppl t-cyan">Problem:</span> Optimal routing in weighted directed graphs
+              with 10⁶ nodes.</div>
+            <div class="p-how"><span class="phl t-green">// Approach</span>
+              <p>Layered 3 algorithms on adjacency list. Key challenge: negative edges — solved with SPFA + cycle
+                detection.</p>
+            </div>
+            <div class="pmetrics"><span class="pmitem"><i class="fas fa-clock"></i> O(E log V)</span><span
+                class="pmitem"><i class="fas fa-memory"></i> O(V+E)</span><span class="pmitem"><i
+                  class="fas fa-bolt"></i> 200ms</span></div>
+            <div class="po-actions"><a href="https://github.com/raykundan655" class="btn btn-p"><i
+                  class="fab fa-github"></i> Code</a><a href="#" class="btn btn-o"><i class="fas fa-play"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card tilt-card reveal">
+        <div class="proj-content-front">
+          <div class="proj-hdr">
+            <div class="ptags"><span class="ptag">C++</span><span class="ptag">OOP</span><span class="ptag">STL</span>
+            </div>
+            <div class="plinks"><a href="https://github.com/raykundan655" class="plink"><i
+                  class="fab fa-github"></i></a><a href="#" class="plink"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="pname"><i class="fas fa-layer-group t-green"></i> Custom STL Containers</h3>
+          <p class="pdesc blur-text">Templated implementations of dynamic array, linked-list queue, min-heap, hash map
+            (open addressing). Benchmarked against std::.</p>
+          <div class="pmetrics front-metrics"><span class="pmitem"><i class="fas fa-equals"></i> Matches STL</span><span
+              class="pmitem"><i class="fas fa-code"></i> Templated</span></div>
+        </div>
+        <div class="proj-overlay">
+          <div class="po-scroll">
+            <h3 class="pname t-green">Custom STL Containers</h3>
+            <div class="p-problem"><span class="ppl t-cyan">Problem:</span> Understand vector, map, heap internals — not
+              just use them.</div>
+            <div class="p-how"><span class="phl t-green">// Approach</span>
+              <p>Interface-first approach. Hash map used double hashing. Matched std::unordered_map perf within 5%.</p>
+            </div>
+            <div class="pmetrics"><span class="pmitem"><i class="fas fa-equals"></i> Matches STL</span><span
+                class="pmitem"><i class="fas fa-vial"></i> Unit tested</span></div>
+            <div class="po-actions"><a href="https://github.com/raykundan655" class="btn btn-p"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card tilt-card reveal">
+        <div class="proj-content-front">
+          <div class="proj-hdr">
+            <div class="ptags"><span class="ptag">Python</span><span class="ptag">Sockets</span><span
+                class="ptag">Threading</span></div>
+            <div class="plinks"><a href="https://github.com/raykundan655" class="plink"><i
+                  class="fab fa-github"></i></a><a href="#" class="plink"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="pname"><i class="fas fa-network-wired t-green"></i> Multi-Client Chat Server</h3>
+          <p class="pdesc blur-text">TCP server using select()-based I/O multiplexing. Thread-safe broadcaster with
+            deque + threading.Lock. Producer-consumer pattern.</p>
+          <div class="pmetrics front-metrics"><span class="pmitem"><i class="fas fa-users"></i> 500+ clients</span><span
+              class="pmitem"><i class="fas fa-lock"></i> Thread-safe</span></div>
+        </div>
+        <div class="proj-overlay">
+          <div class="po-scroll">
+            <h3 class="pname t-green">Multi-Client Chat Server</h3>
+            <div class="p-problem"><span class="ppl t-cyan">Problem:</span> Handle 500+ concurrent TCP connections
+              without blocking.</div>
+            <div class="p-how"><span class="phl t-green">// Approach</span>
+              <p>Started thread-per-client (bottlenecked at 100). Switched to select(). Added lock-guarded broadcast
+                queue.</p>
+            </div>
+            <div class="pmetrics"><span class="pmitem"><i class="fas fa-users"></i> 500+ clients</span><span
+                class="pmitem"><i class="fas fa-exchange-alt"></i> select() I/O</span></div>
+            <div class="po-actions"><a href="https://github.com/raykundan655" class="btn btn-p"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ML Projects grid -->
+    <div class="proj-group-label reveal" style="margin-top:3rem"><span class="t-cyan">▶</span> Machine Learning</div>
+    <div class="projects-grid">
+
+      <div class="proj-card tilt-card reveal" style="border-color:rgba(0,212,255,.15)">
+        <div class="proj-content-front">
+          <div class="proj-hdr">
+            <div class="ptags"><span class="ptag"
+                style="color:var(--c2);border-color:rgba(0,212,255,.3)">Python</span><span class="ptag"
+                style="color:var(--c2);border-color:rgba(0,212,255,.3)">Flask</span><span class="ptag"
+                style="color:var(--c2);border-color:rgba(0,212,255,.3)">Scikit-learn</span></div>
+            <div class="plinks"><a href="https://github.com/raykundan655" class="plink"><i
+                  class="fab fa-github"></i></a></div>
+          </div>
+          <h3 class="pname"><i class="fas fa-brain t-cyan"></i> Future-Predictor</h3>
+          <p class="pdesc blur-text">Full-stack AI web app for multi-domain predictions using Flask and ML libraries.
+          </p>
+          <div class="pmetrics front-metrics"><span class="pmitem"><i class="fas fa-bolt"></i> Multi-domain</span><span
+              class="pmitem"><i class="fas fa-layer-group"></i> Full-stack AI</span></div>
+        </div>
+        <div class="proj-overlay">
+          <div class="po-scroll">
+            <h3 class="pname t-cyan">Future-Predictor</h3>
+            <div class="p-problem"><span class="ppl t-cyan">Problem:</span> Unifying ML models across education,
+              finance, and entertainment.</div>
+            <div class="p-how"><span class="phl t-cyan">// Approach</span>
+              <p>Developed core ML models and integrated them into a responsive UI with smooth data flow using Flask.
+              </p>
+            </div>
+            <div class="pmetrics"><span class="pmitem"><i class="fas fa-bolt"></i> Multi-domain</span><span
+                class="pmitem"><i class="fas fa-layer-group"></i> Full-stack AI</span></div>
+            <div class="po-actions"><a href="https://github.com/raykundan655/Future-Predictor" title="_blank"
+                class="btn btn-p" style="border-color:var(--c2);color:var(--c2);background:rgba(0,212,255,.05)"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card tilt-card reveal" style="border-color:rgba(0,212,255,.15)">
+        <div class="proj-content-front">
+          <div class="proj-hdr">
+            <div class="ptags"><span class="ptag"
+                style="color:var(--c2);border-color:rgba(0,212,255,.3)">Excel</span><span class="ptag"
+                style="color:var(--c2);border-color:rgba(0,212,255,.3)">Python</span><span class="ptag"
+                style="color:var(--c2);border-color:rgba(0,212,255,.3)">Pandas</span></div>
+            <div class="plinks"><a href="https://github.com/raykundan655" class="plink"><i
+                  class="fab fa-github"></i></a></div>
+          </div>
+          <h3 class="pname"><i class="fas fa-chart-pie t-cyan"></i> Healthcare-Insight</h3>
+          <p class="pdesc blur-text">Interactive healthcare dashboard highlighting KPIs with intuitive data
+            visualizations.</p>
+          <div class="pmetrics front-metrics"><span class="pmitem"><i class="fas fa-eye"></i> Clear Overview</span><span
+              class="pmitem"><i class="fas fa-chart-bar"></i> Visual Aggregations</span></div>
+        </div>
+        <div class="proj-overlay">
+          <div class="po-scroll">
+            <h3 class="pname t-cyan">Healthcare-Insight</h3>
+            <div class="p-problem"><span class="ppl t-cyan">Problem:</span> Creating a clear, insightful overview of
+              healthcare operations from raw data.</div>
+            <div class="p-how"><span class="phl t-cyan">// Approach</span>
+              <p>Implemented slicers, charts, and formatting to enhance usability and decision-making.</p>
+            </div>
+            <div class="pmetrics"><span class="pmitem"><i class="fas fa-eye"></i> Clear Overview</span><span
+                class="pmitem"><i class="fas fa-chart-bar"></i> Visual Aggregations</span></div>
+            <div class="po-actions"><a href="https://github.com/raykundan655/Healthcare-Insight" title="_blank"
+                class="btn btn-p" style="border-color:var(--c2);color:var(--c2);background:rgba(0,212,255,.05)"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card tilt-card reveal" style="border-color:rgba(0,212,255,.15)">
+        <div class="proj-content-front">
+          <div class="proj-hdr">
+            <div class="ptags"><span class="ptag"
+                style="color:var(--c2);border-color:rgba(0,212,255,.3)">Python</span><span class="ptag"
+                style="color:var(--c2);border-color:rgba(0,212,255,.3)">Random Forest</span></div>
+            <div class="plinks"><a href="https://github.com/raykundan655" class="plink"><i
+                  class="fab fa-github"></i></a></div>
+          </div>
+          <h3 class="pname"><i class="fas fa-car t-cyan"></i> Car Price Predictor</h3>
+          <p class="pdesc blur-text">Engineered AutoValue, an AI car price predictor using Python, Random Forest, and
+            Flask.</p>
+          <div class="pmetrics front-metrics"><span class="pmitem"><i class="fas fa-cogs"></i> ML Pipeline</span><span
+              class="pmitem"><i class="fas fa-desktop"></i> Real-time AI app</span></div>
+        </div>
+        <div class="proj-overlay">
+          <div class="po-scroll">
+            <h3 class="pname t-cyan">Car Price Predictor</h3>
+            <div class="p-problem"><span class="ppl t-cyan">Problem:</span> Accurately predicting used car prices.</div>
+            <div class="p-how"><span class="phl t-cyan">// Approach</span>
+              <p>Constructed a modular ML pipeline with training, encoding, and deployed a real-time Flask-based web
+                app.</p>
+            </div>
+            <div class="pmetrics"><span class="pmitem"><i class="fas fa-cogs"></i> ML Pipeline</span><span
+                class="pmitem"><i class="fas fa-desktop"></i> Real-time AI app</span></div>
+            <div class="po-actions"><a href="https://github.com/raykundan655/CarPricePredictor" title="_blank"
+                class="btn btn-p" style="border-color:var(--c2);color:var(--c2);background:rgba(0,212,255,.05)"><i
+                  class="fab fa-github"></i> Code</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ SYSTEM MONITOR -->
+  <section id="sysmon">
+    <div class="s-head reveal">
+      <span class="slabel">// 06. system_monitor.sh — LIVE</span>
+      <h2 class="stitle">System Status</h2>
+    </div>
+    <div class="sysmon-grid reveal">
+
+      <!-- Resource Meters -->
+      <div class="sysmon-card sm-resources">
+        <div class="smc-header"><i class="fas fa-microchip t-green"></i> Resource Usage <span class="live-badge"><span
+              class="live-dot"></span>Live</span></div>
+        <div class="resource-meters">
+          <div class="rm-item">
+            <div class="rm-lbl"><span>CPU</span><span class="rm-val t-green" id="cpu-val">0%</span></div>
+            <div class="rm-track">
+              <div class="rm-fill rm-green" id="cpu-bar"></div>
+            </div>
+          </div>
+          <div class="rm-item">
+            <div class="rm-lbl"><span>Memory</span><span class="rm-val t-cyan" id="mem-val">0%</span></div>
+            <div class="rm-track">
+              <div class="rm-fill rm-cyan" id="mem-bar"></div>
+            </div>
+          </div>
+          <div class="rm-item">
+            <div class="rm-lbl"><span>Disk I/O</span><span class="rm-val t-yellow" id="disk-val">0%</span></div>
+            <div class="rm-track">
+              <div class="rm-fill rm-yellow" id="disk-bar"></div>
+            </div>
+          </div>
+          <div class="rm-item">
+            <div class="rm-lbl"><span>Network</span><span class="rm-val t-pink" id="net-val">0 KB/s</span></div>
+            <div class="rm-track">
+              <div class="rm-fill rm-pink" id="net-bar"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Sparkline canvas -->
+        <canvas id="spark-canvas" height="60" style="margin-top:1rem;width:100%"></canvas>
+      </div>
+
+      <!-- Process List -->
+      <div class="sysmon-card sm-processes">
+        <div class="smc-header"><i class="fas fa-list t-cyan"></i> Running Processes</div>
+        <div class="proc-list">
+          <div class="proc-row proc-hdr"><span>PID</span><span>Process</span><span>Status</span><span>CPU</span></div>
+          <div class="proc-row"><span class="t-muted">1001</span><span class="t-green">dsa_solver.js</span><span
+              class="proc-active">RUNNING</span><span class="t-green" id="proc1-cpu">12%</span></div>
+          <div class="proc-row"><span class="t-muted">1002</span><span class="t-cyan">model_train.js</span><span
+              class="proc-active">RUNNING</span><span class="t-green" id="proc2-cpu">34%</span></div>
+          <div class="proc-row"><span class="t-muted">1003</span><span class="t-yellow">data_pipeline</span><span
+              class="proc-active">RUNNING</span><span class="t-green" id="proc3-cpu">8%</span></div>
+          <div class="proc-row"><span class="t-muted">1004</span><span class="t-pink">inference.api</span><span
+              class="proc-active">RUNNING</span><span class="t-green" id="proc4-cpu">5%</span></div>
+          <div class="proc-row"><span class="t-muted">1005</span><span class="t-muted">git_commits</span><span
+              class="proc-wait">WAITING</span><span class="t-muted">0%</span></div>
+        </div>
+      </div>
+
+      <!-- Live Log Stream -->
+      <div class="sysmon-card sm-logs">
+        <div class="smc-header"><i class="fas fa-terminal t-yellow"></i> Live System Log <span class="live-badge"><span
+              class="live-dot"></span>Stream</span></div>
+        <div class="log-stream" id="log-stream"></div>
+      </div>
+
+      <!-- Service Status -->
+      <div class="sysmon-card sm-services">
+        <div class="smc-header"><i class="fas fa-server t-pink"></i> Services</div>
+        <div class="svc-list">
+          <div class="svc-row">
+            <div class="svc-dot svc-on"></div><span>Portfolio Engine</span><span class="svc-v t-green">v2.0.1</span>
+          </div>
+          <div class="svc-row">
+            <div class="svc-dot svc-on"></div><span>Model Server (FastAPI)</span><span
+              class="svc-v t-green">Online</span>
+          </div>
+          <div class="svc-row">
+            <div class="svc-dot svc-on"></div><span>Data Pipeline</span><span class="svc-v t-cyan">Processing</span>
+          </div>
+          <div class="svc-row">
+            <div class="svc-dot svc-warn"></div><span>GPU Accelerator</span><span class="svc-v t-yellow">Queued</span>
+          </div>
+          <div class="svc-row">
+            <div class="svc-dot svc-on"></div><span>Git Daemon</span><span class="svc-v t-green">Active</span>
+          </div>
+        </div>
+        <!-- Uptime counter -->
+        <div class="uptime-row">Uptime: <span class="t-green" id="uptime-disp">00:00:00</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ SKILLS -->
+  <section id="skills" class="skills-section">
+    <div class="s-head reveal">
+      <span class="slabel">// 07. core_modules.sys</span>
+      <h2 class="stitle">Engineering Matrix</h2>
+    </div>
+
+    <div class="matrix-layout reveal">
+      <!-- Left: Sidebar with Radar and Tabs -->
+      <div class="matrix-sidebar">
+        <div class="radar-box">
+          <div class="radar-label"><i class="fas fa-satellite-dish t-green"></i> Live Telemetry</div>
+          <canvas id="radar-chart" width="250" height="250"></canvas>
+        </div>
+
+        <div class="matrix-tabs">
+          <button class="mtab active" data-mod="lang"><span class="mt-idx">01</span><i class="fas fa-code"></i>
+            Languages</button>
+          <button class="mtab" data-mod="core"><span class="mt-idx">02</span><i class="fas fa-microchip"></i> Core
+            CS</button>
+          <button class="mtab" data-mod="ml"><span class="mt-idx">03</span><i class="fas fa-brain"></i> Machine
+            Learning</button>
+          <button class="mtab" data-mod="dl"><span class="mt-idx">04</span><i class="fas fa-network-wired"></i> Deep
+            Learning</button>
+          <button class="mtab" data-mod="cv"><span class="mt-idx">05</span><i class="fas fa-eye"></i> Computer
+            Vision</button>
+          <button class="mtab" data-mod="lib"><span class="mt-idx">06</span><i class="fas fa-cubes"></i>
+            Libraries</button>
+          <button class="mtab" data-mod="web"><span class="mt-idx">07</span><i class="fas fa-globe"></i> Web
+            Dev</button>
+          <button class="mtab" data-mod="back"><span class="mt-idx">08</span><i class="fas fa-server"></i> Backend &
+            APIs</button>
+          <button class="mtab" data-mod="data"><span class="mt-idx">09</span><i class="fas fa-database"></i> Data
+            Handling</button>
+          <button class="mtab" data-mod="tools"><span class="mt-idx">10</span><i class="fas fa-tools"></i>
+            Tools</button>
+        </div>
+      </div>
+
+      <!-- Right: Content Panel -->
+      <div class="matrix-content-wrap tilt-card">
+        <div class="mc-bg-grid"></div>
+
+        <div class="mcontent active" id="mod-lang">
+          <div class="mc-head">
+            <i class="fas fa-code t-green mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Programming Languages</h3><span class="mc-sub">// Base.Compiled_&_Interpreted</span>
+            </div>
+          </div>
+          <div class="sk-bars sk-segmented">
+            <div class="skb"><span>C++</span>
+              <div class="skbt">
+                <div class="skbf" style="width:95%;--fc:var(--c1)"></div>
+              </div>
+            </div>
+            <div class="skb"><span>Python</span>
+              <div class="skbt">
+                <div class="skbf" style="width:95%;--fc:var(--c2)"></div>
+              </div>
+            </div>
+            <div class="skb"><span>Java</span>
+              <div class="skbt">
+                <div class="skbf" style="width:85%;--fc:var(--c4)"></div>
+              </div>
+            </div>
+            <div class="skb"><span>C</span>
+              <div class="skbt">
+                <div class="skbf" style="width:90%;--fc:var(--c3)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mcontent" id="mod-core">\n <canvas id="sk-cs-cvs" class="skill-bg-anim"></canvas>
+          <div class="mc-head">
+            <i class="fas fa-microchip t-cyan mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Core Computer Science</h3><span class="mc-sub">// Architecture.Foundations</span>
+            </div>
+          </div>
+          <div class="cyber-tags">
+            <span class="ctag" style="--tc:var(--c2)">DSA &amp; Problem Solving</span>
+            <span class="ctag" style="--tc:var(--c1)">Object-Oriented Prog (OOP)</span>
+            <span class="ctag" style="--tc:var(--c4)">Operating Systems</span>
+            <span class="ctag" style="--tc:var(--c3)">DBMS</span>
+            <span class="ctag" style="--tc:var(--c2)">Computer Networks</span>
+            <span class="ctag" style="--tc:var(--c1)">System Design</span>
+          </div>
+        </div>
+
+        <div class="mcontent" id="mod-ml">\n <canvas id="sk-ml-cvs" class="skill-bg-anim"></canvas>
+          <div class="mc-head">
+            <i class="fas fa-brain t-yellow mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Machine Learning</h3><span class="mc-sub">// Models.Algorithms_Stats</span>
+            </div>
+          </div>
+          <div class="cyber-tags">
+            <span class="ctag" style="--tc:var(--c4)">Supervised Learning</span>
+            <span class="ctag" style="--tc:var(--c2)">Unsupervised Learning</span>
+            <span class="ctag" style="--tc:var(--c1)">Model Evaluation</span>
+            <span class="ctag" style="--tc:var(--c3)">Feature Engineering</span>
+            <span class="ctag" style="--tc:var(--c4)">Bias-Variance Tradeoff</span>
+            <span class="ctag" style="--tc:var(--c2)">Cross Validation</span>
+          </div>
+        </div>
+
+        <div class="mcontent" id="mod-dl">\n <canvas id="sk-dl-cvs" class="skill-bg-anim"></canvas>
+          <div class="mc-head">
+            <i class="fas fa-network-wired t-pink mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Deep Learning</h3><span class="mc-sub">// Advanced.Neural_Nets</span>
+            </div>
+          </div>
+          <div class="cyber-tags">
+            <span class="ctag" style="--tc:var(--c3)">Neural Networks (ANN)</span>
+            <span class="ctag" style="--tc:var(--c1)">CNN</span>
+            <span class="ctag" style="--tc:var(--c2)">RNN / LSTM</span>
+            <span class="ctag" style="--tc:var(--c4)">Backpropagation</span>
+            <span class="ctag" style="--tc:var(--c3)">Loss Functions</span>
+            <span class="ctag" style="--tc:var(--c1)">Adam Optimization</span>
+          </div>
+        </div>
+
+        <div class="mcontent" id="mod-cv">\n <canvas id="sk-cv-cvs" class="skill-bg-anim"></canvas>
+          <div class="mc-head">
+            <i class="fas fa-eye t-green mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Computer Vision</h3><span class="mc-sub">// Visual.Processing_Extraction</span>
+            </div>
+          </div>
+          <div class="cyber-tags">
+            <span class="ctag" style="--tc:var(--c1)">OpenCV</span>
+            <span class="ctag" style="--tc:var(--c2)">Image Processing</span>
+            <span class="ctag" style="--tc:var(--c4)">Contour Detection</span>
+            <span class="ctag" style="--tc:var(--c3)">Object Detection</span>
+            <span class="ctag" style="--tc:var(--c1)">Face Detection</span>
+            <span class="ctag" style="--tc:var(--c2)">Video Processing</span>
+          </div>
+        </div>
+
+        <div class="mcontent" id="mod-lib">\n <canvas id="sk-lib-cvs" class="skill-bg-anim"></canvas>
+          <div class="mc-head">
+            <i class="fas fa-cubes t-cyan mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Libraries &amp; Frameworks</h3><span class="mc-sub">// Integration.Tools</span>
+            </div>
+          </div>
+          <div class="sk-bars sk-segmented" style="margin-bottom:2rem">
+            <div class="skb"><span>NumPy</span>
+              <div class="skbt">
+                <div class="skbf" style="width:90%;--fc:var(--c2)"></div>
+              </div>
+            </div>
+            <div class="skb"><span>Pandas</span>
+              <div class="skbt">
+                <div class="skbf" style="width:85%;--fc:var(--c4)"></div>
+              </div>
+            </div>
+            <div class="skb"><span>Sklearn</span>
+              <div class="skbt">
+                <div class="skbf" style="width:80%;--fc:var(--c1)"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cyber-tags">
+            <span class="ctag" style="--tc:var(--c3)">TensorFlow / Keras</span>
+            <span class="ctag" style="--tc:var(--c2)">PyTorch</span>
+            <span class="ctag" style="--tc:var(--c1)">OpenCV</span>
+          </div>
+        </div>
+
+        <div class="mcontent" id="mod-web">\n <canvas id="sk-web-cvs" class="skill-bg-anim"></canvas>
+          <div class="mc-head">
+            <i class="fas fa-globe t-yellow mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Web Development</h3><span class="mc-sub">// UI.Frontend_Render</span>
+            </div>
+          </div>
+          <div class="sk-bars sk-segmented" style="margin-bottom:2rem">
+            <div class="skb"><span>HTML</span>
+              <div class="skbt">
+                <div class="skbf" style="width:90%;--fc:var(--c4)"></div>
+              </div>
+            </div>
+            <div class="skb"><span>CSS</span>
+              <div class="skbt">
+                <div class="skbf" style="width:85%;--fc:var(--c3)"></div>
+              </div>
+            </div>
+            <div class="skb"><span>Vanilla JS</span>
+              <div class="skbt">
+                <div class="skbf" style="width:80%;--fc:var(--c1)"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cyber-tags">
+            <span class="ctag" style="--tc:var(--c2)">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="mcontent" id="mod-back">\n <canvas id="sk-back-cvs" class="skill-bg-anim"></canvas>
+          <div class="mc-head">
+            <i class="fas fa-server t-pink mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Backend &amp; APIs</h3><span class="mc-sub">// Service.Logic_Endpoints</span>
+            </div>
+          </div>
+          <div class="cyber-tags">
+            <span class="ctag" style="--tc:var(--c3)">Flask (Python)</span>
+            <span class="ctag" style="--tc:var(--c2)">REST APIs</span>
+            <span class="ctag" style="--tc:var(--c1)">API Integration</span>
+          </div>
+        </div>
+
+        <div class="mcontent" id="mod-data">\n <canvas id="sk-data-cvs" class="skill-bg-anim"></canvas>
+          <div class="mc-head">
+            <i class="fas fa-database t-green mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Data Handling</h3><span class="mc-sub">// Data.Pipelines_ETL</span>
+            </div>
+          </div>
+          <div class="cyber-tags">
+            <span class="ctag" style="--tc:var(--c1)">Data Cleaning</span>
+            <span class="ctag" style="--tc:var(--c2)">Data Visualization</span>
+            <span class="ctag" style="--tc:var(--c4)">Handling Missing Data</span>
+            <span class="ctag" style="--tc:var(--c3)">Feature Scaling</span>
+            <span class="ctag" style="--tc:var(--c1)">SQL</span>
+          </div>
+        </div>
+
+        <div class="mcontent" id="mod-tools">\n <canvas id="sk-tools-cvs" class="skill-bg-anim"></canvas>
+          <div class="mc-head">
+            <i class="fas fa-tools t-cyan mc-icon"></i>
+            <div>
+              <h3 class="mc-title">Tools &amp; Practices</h3><span class="mc-sub">// Environment.Workflows</span>
+            </div>
+          </div>
+          <div class="cyber-tags" style="margin-bottom:2rem">
+            <span class="ctag" style="--tc:var(--c2)">Git &amp; GitHub</span>
+            <span class="ctag" style="--tc:var(--c1)">Linux CMD</span>
+            <span class="ctag" style="--tc:var(--c4)">VS Code</span>
+            <span class="ctag" style="--tc:var(--c3)">Jupyter Notebook</span>
+            <span class="ctag" style="--tc:var(--c2)">Google Colab</span>
+          </div>
+          <div class="cyber-tags">
+            <span class="ctag" style="--tc:var(--text)">Clean Code Properties</span>
+            <span class="ctag" style="--tc:var(--text)">Debugging</span>
+            <span class="ctag" style="--tc:var(--text)">Code Optimization</span>
+            <span class="ctag" style="--tc:var(--text)">Problem Decomposition</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════ EXPERIENCE -->
+  <section id="experience">
+    <div class="s-head reveal">
+      <span class="slabel">// 08. work_history.log</span>
+      <h2 class="stitle">Internships &amp; Training</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <a href="https://drive.google.com/file/d/1zYHGDNYncmjbd7r6U3-QZgwtFyW7iUAz/view?usp=sharing" title="_blank"
+          class="tl-content tilt-card" target="_blank" style="text-decoration:none; display:block; color:inherit;">
+          <div class="tl-date t-green">Jul 2025 - Aug 2025</div>
+          <h3 class="tl-role">Data Analytics Virtual Intern</h3>
+          <h4 class="tl-company"><i class="fas fa-building"></i> Deloitte (Forage)</h4>
+          <p class="tl-desc">
+            • Gained hands-on Excel experience through Data Analytics Simulation.<br>
+            • Applied data preprocessing &amp; visualization techniques to solve real-world problems.<br>
+            • Strengthened analytical skills through data-driven insights.
+          </p>
+          <div class="tl-tags"><span class="ptag">Excel</span><span class="ptag">Data Analytics</span></div>
+        </a>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <a href="https://drive.google.com/file/d/1cjOvbrsKvQcbpDCxLhdysI2l8pMGxekf/view?usp=sharing" title="_blank"
+          class="tl-content tilt-card" target="_blank" style="text-decoration:none; display:block; color:inherit;">
+          <div class="tl-date t-cyan">Jul 2025 - Aug 2025</div>
+          <h3 class="tl-role">Data Visualization Virtual Intern</h3>
+          <h4 class="tl-company"><i class="fas fa-chart-pie"></i> Tata (Forage)</h4>
+          <p class="tl-desc">
+            • Transformed raw data into meaningful visual insights for business use cases.<br>
+            • Enhanced storytelling skills to effectively communicate business insights.
+          </p>
+          <div class="tl-tags"><span class="ptag" style="color:var(--c2)">Data Visualization</span><span class="ptag"
+              style="color:var(--c2)">Tableau/Power BI</span></div>
+        </a>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <a href="https://drive.google.com/file/d/1h0QLqUoLobjeWzB2mLRxPsScCIG4loRr/view?usp=sharing" title="_blank"
+          class="tl-content tilt-card" target="_blank"
+          style="text-decoration:none; display:block; color:inherit; border-color:rgba(255,0,85,0.3)">
+          <div class="tl-date t-pink">Jun 2025 - Jul 2025</div>
+          <h3 class="tl-role">Advanced Python for ML &amp; AI</h3>
+          <h4 class="tl-company"><i class="fas fa-robot"></i> CSE Pathshala</h4>
+          <p class="tl-desc">
+            • 35+ hour hands-on summer training program on ML and AI using Python.<br>
+            • Built and tested ML models on real-world datasets, focusing on accuracy.<br>
+            • Optimized data pipelines through preprocessing and feature engineering.
+          </p>
+          <div class="tl-tags"><span class="ptag" style="color:var(--c3)">Python</span><span class="ptag"
+              style="color:var(--c3)">Machine Learning</span><span class="ptag" style="color:var(--c3)">AI</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ EDUCATION -->
+  <section id="education">
+    <div class="s-head reveal">
+      <span class="slabel">// 09. academic_records</span>
+      <h2 class="stitle">Education</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-content tilt-card" style="border-color:rgba(255,170,0,0.3)">
+          <div class="tl-date t-yellow">Aug 2023 - Present</div>
+          <h3 class="tl-role">B.Tech in Computer Science and Engineering</h3>
+          <h4 class="tl-company"><i class="fas fa-university"></i> Lovely Professional University (Phagwara, Punjab)
+          </h4>
+          <p class="tl-desc">CGPA: <span class="t-yellow">8.5 / 10</span></p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-content tilt-card" style="border-color:rgba(255,170,0,0.3)">
+          <div class="tl-date t-yellow">Mar 2021 - May 2022</div>
+          <h3 class="tl-role">Intermediate (PCM)</h3>
+          <h4 class="tl-company"><i class="fas fa-school"></i> Shree Maheshwari Vidyalaya (Kolkata, WB)</h4>
+          <p class="tl-desc">Percentage: <span class="t-yellow">79.6%</span></p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-content tilt-card" style="border-color:rgba(255,170,0,0.3)">
+          <div class="tl-date t-yellow">Mar 2019 - May 2020</div>
+          <h3 class="tl-role">Matriculation</h3>
+          <h4 class="tl-company"><i class="fas fa-school"></i> Shree Maheshwari Vidyalaya (Kolkata, WB)</h4>
+          <p class="tl-desc">Percentage: <span class="t-yellow">65.0%</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ CERTIFICATES -->
+  <section id="certificates">
+    <div class="s-head reveal">
+      <span class="slabel">// 10. verified_creds.jwt</span>
+      <h2 class="stitle">Certifications</h2>
+    </div>
+    <div class="certs-grid">
+      <a href="https://drive.google.com/file/d/1TPfOjyUnfciEzh2R6syi4I6U5_D2djSv/view" title="_blank"
+        class="cert-card reveal tilt-card" target="_blank" style="text-decoration:none; color:inherit; display:block;">
+        <div class="cert-icon"><i class="fas fa-cloud t-green"></i></div>
+        <h3 class="cert-name">OCI 2025 Certified Data Science Professional</h3>
+        <p class="cert-issuer">Oracle</p>
+        <div class="cert-date">Issued: Oct 2025</div>
+      </a>
+      <a href="https://www.udemy.com/certificate/UC-44cbc005-3d6f-42da-871f-70a026d1a420/" title="_blank"
+        class="cert-card reveal tilt-card" target="_blank"
+        style="text-decoration:none; color:inherit; display:block; border-color:rgba(0, 212, 255, 0.2)">
+        <div class="cert-icon"><i class="fab fa-python t-cyan"></i></div>
+        <h3 class="cert-name">Python And Flask Framework</h3>
+        <p class="cert-issuer">Udemy</p>
+        <div class="cert-date">Issued: Sep 2025</div>
+      </a>
+      <a href="https://drive.google.com/file/d/1ISFZOh3LPVUSumzsxspZv_WDIEFANjVY/view" title="_blank"
+        class="cert-card reveal tilt-card" target="_blank"
+        style="text-decoration:none; color:inherit; display:block; border-color:rgba(255, 0, 85, 0.2)">
+        <div class="cert-icon"><i class="fas fa-server t-pink"></i></div>
+        <h3 class="cert-name">Cloud Computing</h3>
+        <p class="cert-issuer">Swayam</p>
+        <div class="cert-date">Issued: Apr 2025</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ CONTACT -->
+
+  <section id="contact" style="position:relative; z-index:10;">
+    <div class="s-head reveal">
+      <span class="slabel">// 99. connection_established</span>
+      <h2 class="stitle">Initialize Handshake</h2>
+    </div>
+
+    <div class="contact-wrap reveal">
+      <div class="contact-lhs">
+        <h3 style="font-size: 2.5rem; color: var(--text); margin-bottom: 2rem;">Ready to collaborate? <span
+            class="t-green">Ping me.</span></h3>
+        <p style="color: #888; margin-bottom: 3rem; font-size: 1.1rem; line-height: 1.6;">Whether you have a question, a
+          project idea, or just want to talk about system architecture and machine learning, my inbox is always open.
+          I'll get back to you directly.</p>
+
+        <div class="c-info">
+          <div class="ci-item tilt-card">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div class="ci-det">
+              <span class="ci-lbl t-cyan">Email (SMTP)</span>
+              <p class="ci-text">raikundan655@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="ci-item tilt-card" style="border-color:rgba(0, 255, 102, 0.2)">
+            <div class="ci-icon t-green"><i class="fab fa-linkedin-in"></i></div>
+            <div class="ci-det">
+              <span class="ci-lbl t-green">LinkedIn Profile</span>
+              <p class="ci-text"><a href="https://www.linkedin.com/in/kundankrray/" target="_blank"
+                  style="color:var(--text); text-decoration:none;">/in/kundankrray</a></p>
+            </div>
+          </div>
+
+          <div class="ci-item tilt-card" style="border-color:rgba(255, 170, 0, 0.2)">
+            <div class="ci-icon t-yellow"><i class="fab fa-github"></i></div>
+            <div class="ci-det">
+              <span class="ci-lbl t-yellow">GitHub Repos</span>
+              <p class="ci-text"><a href="https://github.com/raykundan655" target="_blank"
+                  style="color:var(--text); text-decoration:none;">/raykundan655</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-rhs tilt-card">
+        <form class="c-form">
+          <div class="f-row">
+            <div class="f-grp">
+              <label>Name</label>
+              <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="f-grp">
+              <label>Email</label>
+              <input type="email" placeholder="Enter your email" required>
+            </div>
+          </div>
+          <div class="f-grp">
+            <label>Subject</label>
+            <input type="text" placeholder="Mission briefing" required>
+          </div>
+          <div class="f-grp">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Encrypt your message here..." required></textarea>
+          </div>
+          <button type="button" class="btn btn-prim" style="width:100%"><i class="fas fa-paper-plane"
+              style="margin-right:10px"></i> Transmit Packet</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="foot-logo">[<span class="t-green">KKR</span>]</div>
+    <div class="socials">
+      <a href="https://github.com/raykundan655" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/kundankrray/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+      <a href="#" aria-label="Codeforces"><i class="fas fa-trophy"></i></a>
+    </div>
+    <p class="foot-txt">© 2026 Kundan Kr Ray — <span class="t-green">Software Engineer</span> · <span
+        class="t-cyan">Problem Solver</span> · <span class="t-yellow">ML Engineer</span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
