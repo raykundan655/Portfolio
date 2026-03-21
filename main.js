@@ -923,7 +923,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       try {
-        const response = await fetch('http://localhost:8000/sendmail', {
+        const response = await fetch('https://mahiray-backend.vercel.app/sendmail', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
