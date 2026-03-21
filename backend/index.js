@@ -49,6 +49,12 @@ app.post('/sendmail', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Backend active on PORT ${PORT}`);
-});
+// Export the app for Vercel (Required for Serverless Functions)
+export default app;
+
+// Local development only
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Backend active on PORT ${PORT}`);
+    });
+}
