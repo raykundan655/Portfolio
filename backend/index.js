@@ -49,7 +49,6 @@ app.post('/sendmail', async (req, res) => {
     }
 });
 
-// Export the app for Vercel (Required for Serverless Functions)
 export default app;
 
 // Local development only
