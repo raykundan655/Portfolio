@@ -1135,27 +1135,28 @@
       </div>
 
       <div class="contact-rhs tilt-card">
-        <form class="c-form">
+        <form class="c-form" id="contact-form">
           <div class="f-row">
             <div class="f-grp">
               <label>Name</label>
-              <input type="text" placeholder="Enter your name" required>
+              <input type="text" id="form-name" placeholder="Enter your name" required>
             </div>
             <div class="f-grp">
               <label>Email</label>
-              <input type="email" placeholder="Enter your email" required>
+              <input type="email" id="form-email" placeholder="Enter your email" required>
             </div>
           </div>
           <div class="f-grp">
             <label>Subject</label>
-            <input type="text" placeholder="Mission briefing" required>
+            <input type="text" id="form-subject" placeholder="Mission briefing" required>
           </div>
           <div class="f-grp">
             <label>Message</label>
-            <textarea rows="5" placeholder="Encrypt your message here..." required></textarea>
+            <textarea id="form-message" rows="5" placeholder="Encrypt your message here..." required></textarea>
           </div>
-          <button type="button" class="btn btn-prim" style="width:100%"><i class="fas fa-paper-plane"
+          <button type="submit" class="btn btn-prim" id="submit-btn" style="width:100%"><i class="fas fa-paper-plane"
               style="margin-right:10px"></i> Transmit Packet</button>
+          <div id="form-status" class="form-status"></div>
         </form>
       </div>
     </div>
