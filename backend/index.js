@@ -13,9 +13,7 @@ const envOrigins = (process.env.FRONTEND_URL || '')
     .map((origin) => origin.trim())
     .filter(Boolean);
 
-const devOrigins = process.env.NODE_ENV !== 'production' 
-    ? ['http://localhost:5500', 'http://127.0.0.1:5500']
-    : [];
+const devOrigins = ['http://localhost:5500', 'http://127.0.0.1:5500'];
 
 const allowedOrigins = new Set([
     ...envOrigins,
