@@ -76,11 +76,6 @@ app.post('/sendmail', async (req, res) => {
     }
 });
 
-export default app;
-
-// Local development only
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => {
-        console.log(`Backend active on PORT ${PORT}`);
-    });
-}
+app.listen(PORT, () => {
+    console.log(`Backend active on PORT ${PORT}`);
+});
