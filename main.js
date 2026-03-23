@@ -922,6 +922,7 @@ document.addEventListener('DOMContentLoaded', () => {
         message: document.getElementById('form-message').value
       };
 
+      // console.log(formData);
       try {
         const response = await fetch('https://mahiray-backend.vercel.app/sendmail', {
           method: 'POST',
@@ -941,12 +942,14 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           throw new Error(result.message || 'Internal relay failure.');
         }
-      } catch (error) {
+      }
+      catch (error) {
         console.error(error);
         formStatus.textContent = error.message || 'Connectivity failure. Check backend.';
         formStatus.classList.add('error');
         formStatus.style.display = 'block';
-      } finally {
+      }
+      finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
       }
