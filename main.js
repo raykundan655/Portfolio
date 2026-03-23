@@ -924,7 +924,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // console.log(formData);
       try {
-        const response = await fetch('https://mahiray-backend.vercel.app/sendmail', {
+        const response = await fetch('https://portfolio-zrr7.onrender.com/sendmail', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
