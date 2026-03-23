@@ -8,12 +8,35 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-app.use(cors({
-    origin: process.env.FRONTEND_URL,
+const envOrigins = (process.env.FRONTEND_URL || '')
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+
+const devOrigins = process.env.NODE_ENV !== 'production' 
+    ? ['http://localhost:5500', 'http://127.0.0.1:5500']
+    : [];
+
+const allowedOrigins = new Set([
+    ...envOrigins,
+    ...devOrigins,
+    'https://mahiray.vercel.app'
+]);
+
+const corsOptions = {
+    origin(origin, callback) {
+        if (!origin || allowedOrigins.has(origin)) {
+            return callback(null, true);
+        }
+
+        return callback(new Error(`Origin not allowed by CORS: ${origin}`));
+    },
     credentials: true,
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type']
-}));
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Main Email Relay Route
