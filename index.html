@@ -8,6 +8,7 @@
   <meta name="description"
     content="Kundan Kr Ray — CS Engineer specializing in DSA, Systems, and Machine Learning. Live engineering portfolio.">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -15,12 +16,11 @@
 
   <!-- ── Preloader ── -->
   <div id="preloader">
-    <div class="pl-box">
-      <div class="pl-logo">[KKR]</div>
-      <div class="pl-bar-wrap">
-        <div class="pl-bar" id="pl-bar"></div>
+    <div class="pl-wrap">
+      <div class="pl-main-line">
+        <span id="pl-text"></span><span id="pl-cursor"></span>
       </div>
-      <div class="pl-status" id="pl-status">$ initializing system...</div>
+      <div id="pl-line" class="pl-line"></div>
     </div>
   </div>
 
@@ -38,7 +38,7 @@
 
   <!-- ── Nav ── -->
   <nav id="navbar">
-    <div class="logo">[<span class="t-green">KKR</span>]<span class="logo-cursor">█</span></div>
+    <a href="#home" class="logo" style="text-decoration:none"><i class="fa-solid fa-code t-green"></i></a>
     <ul class="nav-links">
       <li><a href="#home"><span class="nn">01.</span>Home</a></li>
       <li><a href="#about"><span class="nn">02.</span>About</a></li>
@@ -188,7 +188,7 @@
             <div class="pc-name">LeetCode</div>
             <div class="pc-handle">
               <a style="color:white; text-decoration:none" href="https://leetcode.com/u/kundan_ray/"
-                title="_blank">kundan_ray</a>
+                target="_blank">kundan_ray</a>
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@
             <div class="pc-name">GeeksforGeeks</div>
             <div class="pc-handle">
               <a style="color:white; text-decoration:none" href="https://www.geeksforgeeks.org/profile/mahirauv6c"
-                title="_blank">
+                target="_blank">
                 mahirauv6c
               </a>
             </div>
@@ -276,7 +276,7 @@
 
     <!-- DSA banner -->
     <div class="dsa-banner reveal">
-      <div class="dsab-item"><span class="dsabn t-green">300+</span><span class="dsabl">Problems Solved</span></div>
+      <div class="dsab-item"><span class="dsabn t-green">350+</span><span class="dsabl">Problems Solved</span></div>
       <div class="dsab-item"><span class="dsabn t-cyan">Top 15%</span><span class="dsabl">LeetCode Global</span></div>
       <div class="dsab-item"><span class="dsabn t-yellow">Strong in</span><span class="dsabl">Graphs &amp;
           Optimization</span></div>
@@ -395,108 +395,6 @@
     </div>
 
     <!-- Engineering Projects -->
-    <div class="proj-group-label reveal"><span class="t-green">▶</span> Engineering &amp; Systems</div>
-    <div class="projects-grid">
-
-      <div class="proj-card tilt-card reveal">
-        <div class="proj-content-front">
-          <div class="proj-hdr">
-            <div class="ptags"><span class="ptag">C++</span><span class="ptag">Graphs</span><span
-                class="ptag">BFS/DFS</span></div>
-            <div class="plinks"><a href="https://github.com/raykundan655" class="plink"><i
-                  class="fab fa-github"></i></a><a href="#" class="plink"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-          <h3 class="pname"><i class="fas fa-sitemap t-green"></i> Graph Pathfinder Engine</h3>
-          <p class="pdesc blur-text">C++ engine with Dijkstra, A*, and Bellman-Ford. Custom priority queue with lazy
-            deletion. Handles 10⁶ nodes &lt;200ms.</p>
-          <div class="pmetrics front-metrics"><span class="pmitem"><i class="fas fa-clock"></i> O(E log V)</span><span
-              class="pmitem"><i class="fas fa-bolt"></i> 10⁶ nodes/200ms</span></div>
-        </div>
-        <div class="proj-overlay">
-          <div class="po-scroll">
-            <h3 class="pname t-green">Graph Pathfinder Engine</h3>
-            <div class="p-problem"><span class="ppl t-cyan">Problem:</span> Optimal routing in weighted directed graphs
-              with 10⁶ nodes.</div>
-            <div class="p-how"><span class="phl t-green">// Approach</span>
-              <p>Layered 3 algorithms on adjacency list. Key challenge: negative edges — solved with SPFA + cycle
-                detection.</p>
-            </div>
-            <div class="pmetrics"><span class="pmitem"><i class="fas fa-clock"></i> O(E log V)</span><span
-                class="pmitem"><i class="fas fa-memory"></i> O(V+E)</span><span class="pmitem"><i
-                  class="fas fa-bolt"></i> 200ms</span></div>
-            <div class="po-actions"><a href="https://github.com/raykundan655" class="btn btn-p"><i
-                  class="fab fa-github"></i> Code</a><a href="#" class="btn btn-o"><i class="fas fa-play"></i> Demo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="proj-card tilt-card reveal">
-        <div class="proj-content-front">
-          <div class="proj-hdr">
-            <div class="ptags"><span class="ptag">C++</span><span class="ptag">OOP</span><span class="ptag">STL</span>
-            </div>
-            <div class="plinks"><a href="https://github.com/raykundan655" class="plink"><i
-                  class="fab fa-github"></i></a><a href="#" class="plink"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-          <h3 class="pname"><i class="fas fa-layer-group t-green"></i> Custom STL Containers</h3>
-          <p class="pdesc blur-text">Templated implementations of dynamic array, linked-list queue, min-heap, hash map
-            (open addressing). Benchmarked against std::.</p>
-          <div class="pmetrics front-metrics"><span class="pmitem"><i class="fas fa-equals"></i> Matches STL</span><span
-              class="pmitem"><i class="fas fa-code"></i> Templated</span></div>
-        </div>
-        <div class="proj-overlay">
-          <div class="po-scroll">
-            <h3 class="pname t-green">Custom STL Containers</h3>
-            <div class="p-problem"><span class="ppl t-cyan">Problem:</span> Understand vector, map, heap internals — not
-              just use them.</div>
-            <div class="p-how"><span class="phl t-green">// Approach</span>
-              <p>Interface-first approach. Hash map used double hashing. Matched std::unordered_map perf within 5%.</p>
-            </div>
-            <div class="pmetrics"><span class="pmitem"><i class="fas fa-equals"></i> Matches STL</span><span
-                class="pmitem"><i class="fas fa-vial"></i> Unit tested</span></div>
-            <div class="po-actions"><a href="https://github.com/raykundan655" class="btn btn-p"><i
-                  class="fab fa-github"></i> Code</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="proj-card tilt-card reveal">
-        <div class="proj-content-front">
-          <div class="proj-hdr">
-            <div class="ptags"><span class="ptag">Python</span><span class="ptag">Sockets</span><span
-                class="ptag">Threading</span></div>
-            <div class="plinks"><a href="https://github.com/raykundan655" class="plink"><i
-                  class="fab fa-github"></i></a><a href="#" class="plink"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-          <h3 class="pname"><i class="fas fa-network-wired t-green"></i> Multi-Client Chat Server</h3>
-          <p class="pdesc blur-text">TCP server using select()-based I/O multiplexing. Thread-safe broadcaster with
-            deque + threading.Lock. Producer-consumer pattern.</p>
-          <div class="pmetrics front-metrics"><span class="pmitem"><i class="fas fa-users"></i> 500+ clients</span><span
-              class="pmitem"><i class="fas fa-lock"></i> Thread-safe</span></div>
-        </div>
-        <div class="proj-overlay">
-          <div class="po-scroll">
-            <h3 class="pname t-green">Multi-Client Chat Server</h3>
-            <div class="p-problem"><span class="ppl t-cyan">Problem:</span> Handle 500+ concurrent TCP connections
-              without blocking.</div>
-            <div class="p-how"><span class="phl t-green">// Approach</span>
-              <p>Started thread-per-client (bottlenecked at 100). Switched to select(). Added lock-guarded broadcast
-                queue.</p>
-            </div>
-            <div class="pmetrics"><span class="pmitem"><i class="fas fa-users"></i> 500+ clients</span><span
-                class="pmitem"><i class="fas fa-exchange-alt"></i> select() I/O</span></div>
-            <div class="po-actions"><a href="https://github.com/raykundan655" class="btn btn-p"><i
-                  class="fab fa-github"></i> Code</a></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
     <!-- ML Projects grid -->
     <div class="proj-group-label reveal" style="margin-top:3rem"><span class="t-cyan">▶</span> Machine Learning</div>
     <div class="projects-grid">

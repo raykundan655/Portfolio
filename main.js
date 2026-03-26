@@ -2,35 +2,61 @@
    main.js — Ultra-Dynamic Engineering Portfolio
    =================================================== */
 
-/* ── 1. Preloader ── */
+/* ── 1. Preloader (Typing Intro) ── */
 const preloader = document.getElementById('preloader');
-const plBar = document.getElementById('pl-bar');
-const plStatus = document.getElementById('pl-status');
-const statusMsgs = ['loading assets...', 'booting engine...', 'compiling modules...', 'done ✓'];
-let plProgress = 0, msgIdx = 0;
+const plTextEl = document.getElementById('pl-text');
+const plSubtitle = document.getElementById('pl-line');
+const plCursor  = document.getElementById('pl-cursor');
 
-function runPreloader() {
-  plProgress += Math.random() * 15;
-  if (plProgress > 100) plProgress = 100;
-  if (plBar) plBar.style.width = plProgress + '%';
+(function typeIntro() {
+  const words = ["Namaste", "Hello", "Hola", "Kundan Kr Ray"];
+  let i = 0, j = 0, isDeleting = false;
 
-  if (plProgress > 25 && msgIdx === 0) { plStatus.textContent = '$ ' + statusMsgs[1]; msgIdx++; }
-  if (plProgress > 70 && msgIdx === 1) { plStatus.textContent = '$ ' + statusMsgs[2]; msgIdx++; }
-  if (plProgress >= 100 && msgIdx === 2) { plStatus.textContent = '$ ' + statusMsgs[3]; msgIdx++; }
+  function type() {
+    if (!plTextEl) return;
+    const word = words[i];
 
-  if (plProgress < 100) {
-    setTimeout(runPreloader, 100 + Math.random() * 150);
-  } else {
-    setTimeout(() => {
-      if (preloader) {
-        preloader.style.opacity = '0';
-        preloader.style.visibility = 'hidden';
+    plTextEl.textContent = isDeleting
+      ? word.substring(0, j--)
+      : word.substring(0, j++);
+
+    let speed = isDeleting ? 40 : 70;
+
+    if (!isDeleting && j === word.length + 1) {
+      // Last word — trigger subtitle slide-in, then fade out
+      if (i === words.length - 1) {
+        // Hide cursor cleanly
+        if (plCursor) plCursor.style.opacity = '0';
+
+        // Slide in subtitle after a short pause
+        setTimeout(() => {
+          if (plSubtitle) plSubtitle.classList.add('visible');
+        }, 300);
+
+        // Fade out entire preloader after subtitle is visible
+        setTimeout(() => {
+          if (preloader) {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+          }
+          initAllLiveSystems();
+        }, 1800);
+        return;
       }
-      initAllLiveSystems(); // Start heavy animations only after load
-    }, 400);
+      isDeleting = true;
+      speed = 1000;
+    } else if (isDeleting && j === -1) {
+      isDeleting = false;
+      i++;
+      j = 0;
+      speed = 300;
+    }
+
+    setTimeout(type, speed);
   }
-}
-runPreloader();
+
+  type();
+})();
 
 /* ── 2. Custom Cursor ── */
 const cur = document.getElementById('cursor');
@@ -93,7 +119,7 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => 
 /* ── 5. Continuous Live Counters (Never stop moving) ── */
 const LIVE_STATS = {
   lc: { easy: 180, med: 95, hard: 25 },
-  topics: { graphs: 65, trees: 45, dp: 50, sort: 75, ll: 40, heap: 25 }
+  topics: { graphs: 45, trees: 35, dp: 45, sort: 60, ll: 35, heap: 30 }
 };
 
 function initLiveCounters() {
@@ -882,7 +908,7 @@ function initSkillAnimations() {
       const ctx = toolsC.getContext('2d');
       const cx = toolsC.width / 2, cy = toolsC.height / 2;
 
-       toolsGears.forEach(g => {
+      toolsGears.forEach(g => {
         ctx.save(); ctx.translate(g.x, g.y); ctx.rotate(time * g.s);
         ctx.beginPath();
         for (let i = 0; i < 12; i++) {
